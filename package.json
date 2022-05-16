@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "client-build": "cd client && npm ci && npm run build && mv build ../server",
+    "server-build": "cd server && npm ci",
+    "heroku-prebuild": "npm run client-build && npm run server-build",
     "start": "cd server && node index.js"
   },
   "repository": {
