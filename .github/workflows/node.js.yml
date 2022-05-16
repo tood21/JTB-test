@@ -18,32 +18,31 @@ jobs:
     #     node-version: [12.x, 14.x, 16.x]
 
     steps:
-      - name: check folder
-        run: ls -al
-
       - uses: actions/checkout@v3
 
+      - name: check folder
+        run: ls -al
       # - name: Use Node.js ${{ matrix.node-version }}
       #   uses: actions/setup-node@v3
       #   with:
       #     node-version: ${{ matrix.node-version }}
       #     cache: "npm"
 
-      - name: Check Node v
-        run: node -v
-      - name: install client
-        run: |
-          cd client
-          npm ci
-          unset CI && npm run build
-          mv build ../server
-      - name: check folder2
-        run: ls -al
-      - name: install server
-        run: |
-          cd server
-          ls -al
-          npm ci
+      # - name: Check Node v
+      #   run: node -v
+      # - name: install client
+      #   run: |
+      #     cd client
+      #     npm ci
+      #     unset CI && npm run build
+      #     mv build ../server
+      # - name: check folder2
+      #   run: ls -al
+      # - name: install server
+      #   run: |
+      #     cd server
+      #     ls -al
+      #     npm ci
       - name: deploy to heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
