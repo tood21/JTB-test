@@ -31,11 +31,15 @@ jobs:
 
       - name: Check Node v
         run: node -v
-      - name: install
+      - name: install client
         run: |
           cd client
           npm ci
           unset CI && npm run build
-          ls -al
+          mv build ../server
       - name: check folder2
         run: ls -al
+      - name: install server
+        run: |
+          cd server
+          ls -al
