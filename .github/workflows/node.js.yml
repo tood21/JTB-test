@@ -43,3 +43,4 @@ jobs:
         run: |
           cd server
           ls -al
+          npm ci
