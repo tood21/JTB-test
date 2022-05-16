@@ -35,7 +35,7 @@ jobs:
         run: |
           cd client
           npm ci
-          npm run build
+          unset CI && npm run build
           ls -al
       - name: check folder2
         run: ls -al
