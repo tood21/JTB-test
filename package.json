@@ -1,0 +1,20 @@
+{
+  "name": "jtb-test",
+  "version": "1.0.0",
+  "description": "개인 기술 블로그 테스트1. 폴더확인",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tood21/JTB-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tood21/JTB-test/issues"
+  },
+  "homepage": "https://github.com/tood21/JTB-test#readme"
+}
