@@ -29,19 +29,12 @@ jobs:
       #     node-version: ${{ matrix.node-version }}
       #     cache: "npm"
 
-      # - name: Check Node v
-      #   run: node -v
-      # - name: install
-      #   run: |
-      #   la -al
-      #   npm ci
-      #   npm run build
-      # - name: check folder2
-      #   run: ls -al
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
+      - name: Check Node v
+        run: node -v
+      - name: install
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          la -al
+          npm ci
+          npm run build
+      - name: check folder2
+        run: ls -al
