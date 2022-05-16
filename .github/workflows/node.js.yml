@@ -32,10 +32,9 @@ jobs:
       - name: Check Node v
         run: node -v
       - name: install
-        run: |
-        cd ./client
+        run: | 
+        la -al
         npm ci
         npm run build
-        la -al
       - name: check folder2
         run: ls -al
