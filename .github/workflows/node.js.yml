@@ -31,7 +31,7 @@ jobs:
 
       - name: Check Node v
         run: node -v
-      # - name: install
-      #   run: npm ci
+      - name: install
+        run: cd client && npm ci
       - name: check folder2
         run: ls -al
