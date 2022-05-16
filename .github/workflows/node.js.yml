@@ -33,8 +33,8 @@ jobs:
         run: node -v
       - name: install
         run: |
-          la -al
           npm ci
           npm run build
+          ls -al
       - name: check folder2
         run: ls -al
