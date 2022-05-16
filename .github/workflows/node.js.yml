@@ -33,7 +33,7 @@ jobs:
         run: node -v
       - name: install
         run: |
-        cd client
+        cd ./client
         npm ci
         npm run build
         la -al
