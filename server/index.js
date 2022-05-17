@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 const port = process.env.PORT || 5000;
-const config = require("./config/key.js");
+require("dotenv").config();
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use("/api/user", require("./router/user.js"));
 
 app.listen(port, () => {
   mongoose
-    .connect(config.mongoURI)
+    .connect(process.env.MONGO_URI)
     .then(() => {
       console.log(`Example app listening on port ${port}`);
       console.log("Connection MongoDB...");
