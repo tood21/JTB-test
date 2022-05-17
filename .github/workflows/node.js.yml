@@ -13,11 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # strategy:
-    #   matrix:
-    #     node-version: [12.x, 14.x, 16.x]
-
     steps:
+      - uses: node version
+        run: node -v
       - uses: actions/checkout@v3
       - name: check folder
         run: ls -al
@@ -25,5 +23,5 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "jtb-blog-2"
+          heroku_app_name: "jtb-blog-test1"
           heroku_email: "tood2111@gmail.com"
