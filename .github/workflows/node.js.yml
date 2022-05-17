@@ -22,30 +22,9 @@ jobs:
 
       - name: check folder
         run: ls -al
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      #     cache: "npm"
-
-      # - name: Check Node v
-      #   run: node -v
-      # - name: install client
-      #   run: |
-      #     cd client
-      #     npm ci
-      #     unset CI && npm run build
-      #     mv build ../server
-      # - name: check folder2
-      #   run: ls -al
-      # - name: install server
-      #   run: |
-      #     cd server
-      #     ls -al
-      #     npm ci
-      - name: deploy to heroku
+        - name: deploy to heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "jtb-blog-1"
+          heroku_app_name: "jtb-blog-2"
           heroku_email: "tood2111@gmail.com"
