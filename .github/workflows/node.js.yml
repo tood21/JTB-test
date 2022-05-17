@@ -29,3 +29,9 @@ jobs:
           HD_MONGO_URI: ${{secrets.MONGO_URI}}
           HD_S3_KEY: ${{secrets.S3_KEY}}
           HD_S3_SECRET: ${{secrets.S3_SECRET}}
+          HD_REACT_APP_API_KEY: ${{secrets.REACT_APP_API_KEY}}
+          HD_REACT_APP_AUTH_DOMAIN: ${{secrets.REACT_APP_AUTH_DOMAIN}}
+          HD_REACT_APP_PROJECT_ID: ${{secrets.REACT_APP_PROJECT_ID}}
+          HD_REACT_APP_STORAGE_BUCKET: ${{secrets.REACT_APP_STORAGE_BUCKET}}
+          HD_REACT_APP_MESSAGING_ID: ${{secrets.REACT_APP_MESSAGING_ID}}
+          HD_REACT_APP_APP_ID: ${{secrets.REACT_APP_APP_ID}}
